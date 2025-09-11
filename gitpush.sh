@@ -1,24 +1,38 @@
 #!/bin/bash
 
+# --------------------------
+# Configuración
+# --------------------------
 USER="gvincenti"
 TOKEN=$(cat token.txt)
 
+# --------------------------
+# Mensaje de commit
+# --------------------------
 if [ -z "$1" ]; then
-  echo "⚠️ Uso: ./gitpush.sh <repo> \"<mensaje>\""
-  exit 1
+    echo "Escribí el mensaje de commit:"
+    read mensaje
+else
+    mensaje="$1"
 fi
 
-REPO="$1"
-mensaje="$2"
+# --------------------------
+# Detectar rama actual
+# --------------------------
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-if [ -z "$mensaje" ]; then
-  echo "⚠️ No pasaste mensaje de commit."
-  exit 1
-fi
+# --------------------------
+# Detectar remoto origin
+# --------------------------
+REMOTE_URL=$(git remote get-url origin)
 
-URL="https://$USER:$TOKEN@github.com/$USER/$REPO.git"
+# Reemplazar https://github.com/ por https://USER:TOKEN@github.com/
+URL=${REMOTE_URL/https:\/\/github.com\//https:\/\/$USER:$TOKEN@github.com\/}
 
+# --------------------------
+# Ejecutar git
+# --------------------------
 git add .
 git commit -m "$mensaje"
-git push "$URL" main
+git push "$URL" "$BRANCH"
 
