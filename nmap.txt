@@ -1,6 +1,6 @@
-# Nmap 7.94SVN scan initiated Wed Sep 10 01:16:58 2025 as: nmap -sC -sV -oN nmap.txt 10.10.11.86
-Nmap scan report for 10.10.11.86
-Host is up (0.23s latency).
+# Nmap 7.94SVN scan initiated Thu Sep 11 14:46:39 2025 as: nmap -sC -sV -oN nmap.txt 10.10.11.86
+Nmap scan report for soulmate.htb (10.10.11.86)
+Host is up (0.30s latency).
 Not shown: 998 closed tcp ports (reset)
 PORT   STATE SERVICE VERSION
 22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
@@ -8,9 +8,13 @@ PORT   STATE SERVICE VERSION
 |   256 3e:ea:45:4b:c5:d1:6d:6f:e2:d4:d1:3b:0a:3d:a9:4f (ECDSA)
 |_  256 64:cc:75:de:4a:e6:a5:b4:73:eb:3f:1b:cf:b4:e3:94 (ED25519)
 80/tcp open  http    nginx 1.18.0 (Ubuntu)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-title: Soulmate - Find Your Perfect Match
 |_http-server-header: nginx/1.18.0 (Ubuntu)
-|_http-title: Did not follow redirect to http://soulmate.htb/
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Sep 10 01:17:18 2025 -- 1 IP address (1 host up) scanned in 20.11 seconds
+# Nmap done at Thu Sep 11 14:46:59 2025 -- 1 IP address (1 host up) scanned in 19.96 seconds
