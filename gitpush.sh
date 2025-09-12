@@ -57,9 +57,22 @@ mkdir -p "$LOG_DIR"
 LOG_FILE="$LOG_DIR/$(date +%Y-%m-%d).log"
 
 # --------------------------
+# Obtener lista de archivos modificados
+# --------------------------
+CHANGES=$(git status --short)
+
+# --------------------------
 # Guardar commit en logs
 # --------------------------
-echo "$(date '+%Y-%m-%d %H:%M:%S') | $BRANCH | $mensaje" >> "$LOG_FILE"
+{
+    echo "----------------------------------------"
+    echo "📅 $(date '+%Y-%m-%d %H:%M:%S')"
+    echo "🌿 Rama: $BRANCH"
+    echo "📝 Commit: $mensaje"
+    echo "📂 Cambios:"
+    echo "$CHANGES"
+    echo
+} >> "$LOG_FILE"
 
 # --------------------------
 # Configurar credenciales temporales
@@ -81,4 +94,3 @@ printf "protocol=https\nhost=github.com\nusername=$USER\npassword=$TOKEN\n" | gi
 git config --unset credential.helper
 
 echo "✅ Push completado y log guardado en $LOG_FILE"
-
