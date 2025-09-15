@@ -1,0 +1,8 @@
+/assets              [36m (Status: 301)[0m [Size: 178][34m [--> http://soulmate.htb/assets/][0m
+/dashboard.php       [36m (Status: 302)[0m [Size: 0][34m [--> /login][0m
+/index.php           [32m (Status: 200)[0m [Size: 16688]
+/index.php           [32m (Status: 200)[0m [Size: 16688]
+/login.php           [32m (Status: 200)[0m [Size: 8554]
+/logout.php          [36m (Status: 302)[0m [Size: 0][34m [--> login.php][0m
+/profile.php         [36m (Status: 302)[0m [Size: 0][34m [--> /login][0m
+/register.php        [32m (Status: 200)[0m [Size: 11107]

@@ -1,0 +1,9 @@
+# Dirsearch started Mon Sep 15 18:55:56 2025 as: /usr/bin/dirsearch -u http://soulmate.htb
+
+403   564B   http://soulmate.htb/assets/
+301   178B   http://soulmate.htb/assets    -> REDIRECTS TO: http://soulmate.htb/assets/
+302     0B   http://soulmate.htb/dashboard.php    -> REDIRECTS TO: /login
+200     8KB  http://soulmate.htb/login.php
+302     0B   http://soulmate.htb/logout.php    -> REDIRECTS TO: login.php
+302     0B   http://soulmate.htb/profile.php    -> REDIRECTS TO: /login
+200    11KB  http://soulmate.htb/register.php
