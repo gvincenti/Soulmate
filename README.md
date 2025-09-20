@@ -127,3 +127,7 @@ Este documento resume una intrusión donde, partiendo de enumeración y explotac
 Este documento tiene fines informativos y de auditoría de seguridad. La explotación de sistemas sin autorización es ilegal. Si este trabajo forma parte de una auditoría autorizada o pentest, asegúrate de contar con el alcance y los permisos adecuados, y reporta las vulnerabilidades al propietario del sistema para su corrección.
 
 ---
+
+
+
+<img width="1359" height="734" alt="image" src="https://github.com/user-attachments/assets/01f61392-974b-4d2b-826d-1211cf000771" />
